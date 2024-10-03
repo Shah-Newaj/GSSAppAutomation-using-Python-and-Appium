@@ -28,6 +28,7 @@ wait = WebDriverWait(driver, timeout= 10)
 app = wait.until(EC.presence_of_element_located((AppiumBy.XPATH, "//android.widget.TextView[@content-desc='StaySafe']")))
 app.click()
 
+#see different allocated views
 time.sleep(10)
 map_hospital_view = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Hospital View")
 map_hospital_view.click()
@@ -41,6 +42,8 @@ time.sleep(5)
 map_grp_member_location = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Group Members Location")
 map_grp_member_location.click()
 time.sleep(5)
+
+#Route Mapping
 map_location_search = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Location Search")
 map_location_search.click()
 time.sleep(5)
@@ -63,12 +66,16 @@ time.sleep(5)
 el10 = driver.find_element(by=AppiumBy.XPATH, value="//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]")
 el10.click()
 time.sleep(5)
+
+#Panic Alert
 tab_panic_alert = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Panic Alert\nTab 3 of 3")
 tab_panic_alert.click()
 time.sleep(10)
 panic_accident = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value="Accident")
 panic_accident.click()
 time.sleep(5)
+
+#Head Count
 notification = driver.find_element(by=AppiumBy.XPATH, value="//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[3]")
 notification.click()
 time.sleep(5)
